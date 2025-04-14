@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 // Desafio de Xadrez - MateCheck
-// Nível Novato - Movimentação das Peças
+// Nível Aventureiro - Movimentação do Cavalo
 
 int main()
 {
-    int torre = 0;     // Declaração e inicialização da variável torre
-    int bispo, rainha; // Declaração das variáveis bispo e rainha
+    int torre = 0; // Declaração e inicialização da variável torre
+    int bispo = 0; // Declaração e inicialização da variável bispo
+    int rainha;    // Declaração da variável rainha
 
     printf("*** Movimentação de peças de xadrez ***\n"); // Título do programa
     printf("Movimentos da torre:\n");                    // Início dos movimentos da torre
@@ -35,12 +36,22 @@ int main()
         printf("Esquerda\n"); // Direção para onde o bispo está se movendo
     }
 
+    printf("\n");                      // Espaço para melhor organização
+    printf("Movimentos do cavalo:\n"); // Início dos movimentos do cavalo
+
+    for (int cavalo = 0; cavalo < 2; cavalo++) //Enquanto menor que dois, o loop interno se repete completamente
+    {
+        while (cavalo < 2) //Enquanto cavalo menor que dois, se repete o código
+        {
+            cavalo++; // Incremento de um movimento
+            printf("Baixo\n"); // Direção para onde o cavalo está se movendo
+        }
+
+        printf("Esquerda\n"); // Direção para onde o cavalo está se movendo, após o loop interno ser executado completamente
+    }
+
     return 0;
 }
-
-// Nível Aventureiro - Movimentação do Cavalo
-// Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-// Um loop pode representar a movimentação horizontal e outro vertical.
 
 // Nível Mestre - Funções Recursivas e Loops Aninhados
 // Sugestão: Substitua as movimentações das peças por funções recursivas.
